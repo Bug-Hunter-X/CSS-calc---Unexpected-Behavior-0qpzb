@@ -1,0 +1,18 @@
+To fix this issue, ensure that the `calc()` function is used correctly by following the rules of operator precedence or adding parentheses to explicitly define the order of operations. In this specific case, ensure that the percentage calculation is done before the subtraction.
+
+For example, let's say you want to set the width of an element to 100% minus 10px. The incorrect approach is:
+
+```css
+/* Incorrect */
+width: calc(100% - 10px);
+```
+
+The correct approach is:
+
+```css
+/* Correct */
+width: calc(100% - 10px);
+/* Or better yet, for clarity */
+width: calc(100vw - 10px); 
+```
+The `vw` unit often gives more predictable results when working with percentages and fixed values.
